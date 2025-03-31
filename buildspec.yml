@@ -8,7 +8,7 @@ phases:
   pre_build:
     commands:
       - echo "Fetching CodeArtifact token..."
-      - export CODEARTIFACT_AUTH_TOKEN=$(aws codeartifact get-authorization-token --domain nextwork --domain-owner 123456789012 --query authorizationToken --output text)
+      - export CODEARTIFACT_AUTH_TOKEN=$(aws codeartifact get-authorization-token --domain nextwork --domain-owner 145023135012 --query authorizationToken --output text)
       - sed -i "s|CODEARTIFACT_TOKEN_PLACEHOLDER|$CODEARTIFACT_AUTH_TOKEN|g" settings.xml
 
   build:
